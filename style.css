@@ -1,0 +1,128 @@
+nav {
+    margin-top: 0%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    position: fixed;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+  }
+  
+  nav ul li {
+    opacity: 0;
+    animation: fadeInUp 5s ease-out forwards;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url('background1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .welcome {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+  
+    display: inline-block;
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgb(170, 23, 80);
+    padding: 1.5rem 2.5rem;
+  
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+  
+    box-shadow:
+      0 0 20px rgba(255, 182, 220, 0.6),
+      0 0 40px rgba(170, 23, 80, 0.3),
+      inset 0 0 15px rgba(255, 255, 255, 0.4);
+  
+    opacity: 0;
+    animation: fadeInUp 3s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .container {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    height: 380px;
+    margin: 0 auto;
+    gap: 10px;
+  }
+  
+  .panel {
+    flex: 1;
+    height: 100%;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: flex 0.5s ease;
+  }
+  
+  .panel:hover,
+  .panel.active {
+    flex: 5;
+  }
+  
+  .panel h3 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 1.1rem;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    margin: 0;
+    white-space: nowrap;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+  }
